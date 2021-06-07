@@ -78,18 +78,22 @@
 (defn append-subscription-html [html subscribe-url unsubscribe-url]
   (str
     ; start of the html wrapper table
-    "<body style='background-color:#f6f6f6;'>"
-    "<table border='0' cellspacing='0' width='100%'><tr><td></td>"
-    "<td width='600' style='background-color:white;padding:30px;'>"
+    "<body>"
+    "<table border='0' cellspacing='0' width='100%'>"
+
+    "<tr><td width='600' style='padding:30px;'>"
     ; the actual html content
     html "\n"
     ; end of the html wrapper table
-    "</td><td></td></tr></table>"
-    "<div style='text-align: center;' align='center'>"
+    "</td><td></td></tr>"
+
+    "<tr><td width='600' style='padding:30px; text-align: center;'>"
     "<p>—</p>"
-    "<p>Subscribe to these emails: <a href='" subscribe-url "'>" subscribe-url "</a></p>"
+    "<p>Subscribe to these emails: <a href='" subscribe-url "'>" subscribe-url "</a></p>\n"
     "<p>Don't want these emails? <a href='" unsubscribe-url "'>Unsubscribe</a></p>\n"
-    "</div>\n"
+    "</td><td></td></tr>"
+
+    "</table>"
     "</body>"))
 
 (defn send-emails [req res]

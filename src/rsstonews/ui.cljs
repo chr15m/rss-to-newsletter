@@ -347,6 +347,7 @@
                  :value (or (:subject @editor-state) "")
                  :class :fit}]])
 
+; TODO: allow switching between prosemirror and pure markdown
 (defn component-editor-prosemirror [editor-state editor]
   (js/console.log "prosemirror remount")
   [:div {:ref (partial editor-mounted editor-state editor)}])
