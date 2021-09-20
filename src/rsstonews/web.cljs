@@ -30,7 +30,7 @@
   (.set app "trust proxy" "loopback")
   ; set up sessions table
   (.use app (session #js {:secret (env "SESSION_SECRET" "DEVMODE")
-                          :saveUninitialized false
+                          :saveUninitialized true
                           :resave true
                           :cookie #js {:secure "auto"
                                        :httpOnly true
