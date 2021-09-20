@@ -43,7 +43,7 @@
 
 (defn add-default-routes [app]
   ; none yet here
-  (.use app "/" (serve-static (path/join js/__dirname "public")))
+  (.use app "/" (serve-static (path/join js/__dirname (if (env "NGINX_SERVER_NAME") "build" "public"))))
   app)
 
 (defn reset-routes [app]
