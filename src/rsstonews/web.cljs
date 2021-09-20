@@ -8,9 +8,12 @@
     ["body-parser" :as body-parser]
     ["serve-static" :as serve-static]
     ["express-session" :as session]
-    ;["morgan" :as morgan]
-    ;["rotating-file-stream" :as rfs]
-    ))
+    ["morgan" :as morgan]
+    ["rotating-file-stream" :as rfs]
+    ["keyv" :as Keyv]
+    [cljs.core.async :refer (go <!) :as async]
+    [cljs.core.async.interop :refer-macros [<p!]]
+    [applied-science.js-interop :as j]))
 
 ; fatal errors should bail and notify the user
 (defn bail [msg]
@@ -21,24 +24,49 @@
 (defn env [k & [default]]
   (or (aget js/process.env k) default))
 
+(defonce keyv (Keyv. (env "DATABASE" "sqlite://./sessions.sqlite")))
+
+(defn create-store [kv]
+  (let [e (session/Store.)]
+    (aset e "destroy" (fn [sid callback]
+                        (go (<p! (j/call kv :destroy sid))
+                            (callback))))
+    (aset e "get" (fn [sid callback]
+                    (go (callback
+                          nil
+                          (<p! (j/call kv :get sid))))))
+    (aset e "set" (fn [sid session callback]
+                    (go (<p! (j/call kv :set sid session))
+                        (callback))))
+    (aset e "touch" (fn [sid session callback]
+                      (go (<p! (j/call kv :set sid session))
+                          (callback))))
+    (aset e "clear" (fn [callback]
+                      (go (<p! (js/call kv :clear))
+                          (callback))))
+    e))
+
 (defn add-default-middleware [app]
   ; set up logging
-  #_ (let [logs (str js/__dirname "/logs")
-        access-log (rfs "access.log" #js {:interval "7d" :path logs})]
-    (.use app (morgan "combined" #js {:stream access-log})))
+  (let [logs (str js/__dirname "/logs")
+        access-log (.createStream rfs "access.log" #js {:interval "7d" :path logs})
+        store (create-store keyv)]
+    (.use app (morgan "combined" #js {:stream access-log}))
+    ; set up sessions table
+    (.use app (session #js {:secret (env "SESSION_SECRET" "DEVMODE")
+                            :saveUninitialized false
+                            :resave true
+                            :cookie #js {:secure "auto"
+                                         :httpOnly true
+                                         ; 10 years
+                                         :maxAge (* 10 365 24 60 60 1000)}
+                            :store store})))
   ; configure sane server defaults
   (.set app "trust proxy" "loopback")
-  ; set up sessions table
-  (.use app (session #js {:secret (env "SESSION_SECRET" "DEVMODE")
-                          :saveUninitialized true
-                          :resave true
-                          :cookie #js {:secure "auto"
-                                       :httpOnly true
-                                       ; 10 years
-                                       :maxAge (* 10 365 24 60 60 1000)}}))
-  (.use app (cookies))
+  ; use cookies
+  (.use app (cookies (env "SESSION_SECRET" "DEVMODE")))
   ; json body parser
-  (.use app (.json body-parser #js {:limit "2mb" :extended true :parameterLimit 1000}))
+  (.use app (.json body-parser #js {:limit "10mb" :extended true :parameterLimit 1000}))
   app)
 
 (defn add-default-routes [app]

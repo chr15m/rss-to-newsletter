@@ -43,12 +43,13 @@
 (defn login [req res]
   (if (= (aget req.body "password") site-password)
     (do
-      (aset req.session "authenticated" true)
+      (j/assoc-in! req [:session :authenticated] true)
       (.json res true))
     (-> res (.status 403) (.json #js {:error "Incorrect password"}))))
 
 (defn logout [req res]
-  (aset req.session "authenticated" false)
+  (when-let [session (j/get req "session")]
+    (js-delete session "authenticated"))
   (.json res true))
 
 (defn cors-proxy [req res]

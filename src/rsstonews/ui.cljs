@@ -31,7 +31,7 @@
 ; *** functions *** ;
 
 (defn <p!-get-data [state]
-  (-> (js/fetch "/data")
+  (-> (js/fetch "/data" #js {:credentials "same-origin"})
       (.then (fn [res]
                (when (= res.status 403) (swap! state assoc :tab :login))
                (.json res)))))
@@ -48,6 +48,7 @@
 (defn save-data! [state-structure]
   (-> (js/fetch "/save"
                 #js {:method "POST"
+                     :credentials "same-origin"
                      :headers #js {:content-type "application/json"}
                      :body (js/JSON.stringify (clj->js state-structure))})
       (.then (fn [res]
@@ -64,6 +65,7 @@
 (defn login [state password]
   (-> (js/fetch "/login"
                 #js {:method "POST"
+                     :credentials "same-origin"
                      :headers #js {:content-type "application/json"}
                      :body (js/JSON.stringify (clj->js {:password password}))})
       (.then (fn [res]
@@ -76,7 +78,8 @@
 
 (defn logout [state]
   (-> (js/fetch "/logout"
-                #js {:headers #js {:content-type "application/json"}})
+                #js {:headers #js {:content-type "application/json"}
+                     :credentials "same-origin"})
       (.then (fn [res]
                (reset! state (merge initial-state {:tab :login}))))))
 
