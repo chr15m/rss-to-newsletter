@@ -7173,270 +7173,270 @@ function $rsstonews$server$authenticate$$($req$$, $res$jscomp$17$$, $pass$$) {
   return $cljs$core$not$$($req$$.session.authenticated) ? $res$jscomp$17$$.status(403).json({error:"Not authenticated."}) : $pass$$.$cljs$core$IFn$_invoke$arity$0$ ? $pass$$.$cljs$core$IFn$_invoke$arity$0$() : $pass$$.call(null);
 }
 function $rsstonews$server$get_data$$($req$jscomp$1$$, $res$jscomp$18$$) {
-  var $c__10686__auto__$jscomp$5$$ = $cljs$core$async$chan$cljs$0core$0IFn$0_invoke$0arity$03$$(1);
+  var $c__8515__auto__$$ = $cljs$core$async$chan$cljs$0core$0IFn$0_invoke$0arity$03$$(1);
   $cljs$core$async$impl$dispatch$run$$(function() {
-    var $f__10687__auto__$jscomp$21$$ = function() {
-      function $switch__10523__auto__$jscomp$23$$($state_12902$$) {
-        var $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$ = $state_12902$$[1];
-        if (1 === $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$) {
-          return $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$ = $rsstonews$server$keyv$$.get("user-data"), $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$ = $cljs$core$async$interop$p__GT_c$$($inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$), $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_12902$$, 2, $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$);
+    var $f__8516__auto__$$ = function() {
+      function $switch__8492__auto__$$($state_8604$$) {
+        var $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$ = $state_8604$$[1];
+        if (1 === $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$) {
+          return $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$ = $rsstonews$server$keyv$$.get("user-data"), $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$ = $cljs$core$async$interop$p__GT_c$$($inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$), $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_8604$$, 2, $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$);
         }
-        if (2 === $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$) {
-          $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$ = $state_12902$$[2];
-          var $inst_12886$$ = $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$ instanceof $cljs$core$ExceptionInfo$$, $inst_12892_inst_12893$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$));
-          $inst_12892_inst_12893$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_12892_inst_12893$$, $cljs$cst$keyword$promise_DASH_error$$);
-          $state_12902$$[7] = $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$;
-          $state_12902$$[1] = $cljs$core$truth_$$($inst_12886$$ && $inst_12892_inst_12893$$) ? 3 : 4;
+        if (2 === $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$) {
+          $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$ = $state_8604$$[2];
+          var $inst_8592$$ = $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$ instanceof $cljs$core$ExceptionInfo$$, $inst_8594_inst_8595$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$));
+          $inst_8594_inst_8595$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_8594_inst_8595$$, $cljs$cst$keyword$promise_DASH_error$$);
+          $state_8604$$[7] = $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$;
+          $state_8604$$[1] = $cljs$core$truth_$$($inst_8592$$ && $inst_8594_inst_8595$$) ? 3 : 4;
           return $cljs$cst$keyword$recur$$;
         }
-        if (3 === $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$) {
-          throw $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$ = $state_12902$$[7], $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$;
+        if (3 === $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$) {
+          throw $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$ = $state_8604$$[7], $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$;
         }
-        return 4 === $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$ ? ($inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$ = $state_12902$$[7], $state_12902$$[2] = $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$, $state_12902$$[1] = 5, $cljs$cst$keyword$recur$$) : 5 === $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$ ? ($inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$ = 
-        $res$jscomp$18$$.json($state_12902$$[2]), $cljs$core$async$impl$ioc_helpers$return_chan$$($state_12902$$, $inst_12877_inst_12878_inst_12880_inst_12880__$1_inst_12900_state_val_12903$$)) : null;
+        return 4 === $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$ ? ($inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$ = $state_8604$$[7], $state_8604$$[2] = $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$, $state_8604$$[1] = 5, $cljs$cst$keyword$recur$$) : 5 === $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$ ? ($inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$ = $res$jscomp$18$$.json($state_8604$$[2]), 
+        $cljs$core$async$impl$ioc_helpers$return_chan$$($state_8604$$, $inst_8588_inst_8589_inst_8591_inst_8591__$1_inst_8602_state_val_8605$$)) : null;
       }
       return function() {
-        function $rsstonews$server$get_data_$_state_machine__10524__auto____1$$($state_12902$jscomp$1$$) {
+        function $rsstonews$server$get_data_$_state_machine__8493__auto____1$$($state_8604$jscomp$1$$) {
           for (;;) {
             a: {
               try {
                 for (;;) {
-                  var $result__10526__auto__$jscomp$inline_783$$ = $switch__10523__auto__$jscomp$23$$($state_12902$jscomp$1$$);
-                  if (!$cljs$core$keyword_identical_QMARK_$$($result__10526__auto__$jscomp$inline_783$$, $cljs$cst$keyword$recur$$)) {
-                    var $ex__10527__auto__$jscomp$inline_784_ret_value__10525__auto__$jscomp$21$$ = $result__10526__auto__$jscomp$inline_783$$;
+                  var $result__8495__auto__$jscomp$inline_783$$ = $switch__8492__auto__$$($state_8604$jscomp$1$$);
+                  if (!$cljs$core$keyword_identical_QMARK_$$($result__8495__auto__$jscomp$inline_783$$, $cljs$cst$keyword$recur$$)) {
+                    var $ex__8496__auto__$jscomp$inline_784_ret_value__8494__auto__$$ = $result__8495__auto__$jscomp$inline_783$$;
                     break a;
                   }
                 }
-              } catch ($e12921$jscomp$inline_785$$) {
-                $ex__10527__auto__$jscomp$inline_784_ret_value__10525__auto__$jscomp$21$$ = $e12921$jscomp$inline_785$$;
-                $state_12902$jscomp$1$$[2] = $ex__10527__auto__$jscomp$inline_784_ret_value__10525__auto__$jscomp$21$$;
-                if ($cljs$core$seq$$($state_12902$jscomp$1$$[4])) {
-                  $state_12902$jscomp$1$$[1] = $cljs$core$first$$($state_12902$jscomp$1$$[4]);
+              } catch ($e8612$jscomp$inline_785$$) {
+                $ex__8496__auto__$jscomp$inline_784_ret_value__8494__auto__$$ = $e8612$jscomp$inline_785$$;
+                $state_8604$jscomp$1$$[2] = $ex__8496__auto__$jscomp$inline_784_ret_value__8494__auto__$$;
+                if ($cljs$core$seq$$($state_8604$jscomp$1$$[4])) {
+                  $state_8604$jscomp$1$$[1] = $cljs$core$first$$($state_8604$jscomp$1$$[4]);
                 } else {
-                  throw $ex__10527__auto__$jscomp$inline_784_ret_value__10525__auto__$jscomp$21$$;
+                  throw $ex__8496__auto__$jscomp$inline_784_ret_value__8494__auto__$$;
                 }
-                $ex__10527__auto__$jscomp$inline_784_ret_value__10525__auto__$jscomp$21$$ = $cljs$cst$keyword$recur$$;
+                $ex__8496__auto__$jscomp$inline_784_ret_value__8494__auto__$$ = $cljs$cst$keyword$recur$$;
               }
             }
-            if (!$cljs$core$keyword_identical_QMARK_$$($ex__10527__auto__$jscomp$inline_784_ret_value__10525__auto__$jscomp$21$$, $cljs$cst$keyword$recur$$)) {
-              return $ex__10527__auto__$jscomp$inline_784_ret_value__10525__auto__$jscomp$21$$;
+            if (!$cljs$core$keyword_identical_QMARK_$$($ex__8496__auto__$jscomp$inline_784_ret_value__8494__auto__$$, $cljs$cst$keyword$recur$$)) {
+              return $ex__8496__auto__$jscomp$inline_784_ret_value__8494__auto__$$;
             }
           }
         }
-        function $rsstonews$server$get_data_$_state_machine__10524__auto____0$$() {
-          var $statearr_12919$$ = [null, null, null, null, null, null, null, null];
-          $statearr_12919$$[0] = $rsstonews$server$get_data_$_state_machine__10524__auto__$$;
-          $statearr_12919$$[1] = 1;
-          return $statearr_12919$$;
+        function $rsstonews$server$get_data_$_state_machine__8493__auto____0$$() {
+          var $statearr_8611$$ = [null, null, null, null, null, null, null, null];
+          $statearr_8611$$[0] = $rsstonews$server$get_data_$_state_machine__8493__auto__$$;
+          $statearr_8611$$[1] = 1;
+          return $statearr_8611$$;
         }
-        var $rsstonews$server$get_data_$_state_machine__10524__auto__$$ = null;
-        $rsstonews$server$get_data_$_state_machine__10524__auto__$$ = function($state_12902$jscomp$2$$) {
+        var $rsstonews$server$get_data_$_state_machine__8493__auto__$$ = null;
+        $rsstonews$server$get_data_$_state_machine__8493__auto__$$ = function($state_8604$jscomp$2$$) {
           switch(arguments.length) {
             case 0:
-              return $rsstonews$server$get_data_$_state_machine__10524__auto____0$$.call(this);
+              return $rsstonews$server$get_data_$_state_machine__8493__auto____0$$.call(this);
             case 1:
-              return $rsstonews$server$get_data_$_state_machine__10524__auto____1$$.call(this, $state_12902$jscomp$2$$);
+              return $rsstonews$server$get_data_$_state_machine__8493__auto____1$$.call(this, $state_8604$jscomp$2$$);
           }
           throw Error("Invalid arity: " + arguments.length);
         };
-        $rsstonews$server$get_data_$_state_machine__10524__auto__$$.$cljs$core$IFn$_invoke$arity$0$ = $rsstonews$server$get_data_$_state_machine__10524__auto____0$$;
-        $rsstonews$server$get_data_$_state_machine__10524__auto__$$.$cljs$core$IFn$_invoke$arity$1$ = $rsstonews$server$get_data_$_state_machine__10524__auto____1$$;
-        return $rsstonews$server$get_data_$_state_machine__10524__auto__$$;
+        $rsstonews$server$get_data_$_state_machine__8493__auto__$$.$cljs$core$IFn$_invoke$arity$0$ = $rsstonews$server$get_data_$_state_machine__8493__auto____0$$;
+        $rsstonews$server$get_data_$_state_machine__8493__auto__$$.$cljs$core$IFn$_invoke$arity$1$ = $rsstonews$server$get_data_$_state_machine__8493__auto____1$$;
+        return $rsstonews$server$get_data_$_state_machine__8493__auto__$$;
       }();
-    }(), $state__10688__auto__$jscomp$21$$ = function() {
-      var $statearr_12927$$ = $f__10687__auto__$jscomp$21$$();
-      $statearr_12927$$[6] = $c__10686__auto__$jscomp$5$$;
-      return $statearr_12927$$;
+    }(), $state__8517__auto__$$ = function() {
+      var $statearr_8615$$ = $f__8516__auto__$$();
+      $statearr_8615$$[6] = $c__8515__auto__$$;
+      return $statearr_8615$$;
     }();
-    return $cljs$core$async$impl$ioc_helpers$run_state_machine_wrapped$$($state__10688__auto__$jscomp$21$$);
+    return $cljs$core$async$impl$ioc_helpers$run_state_machine_wrapped$$($state__8517__auto__$$);
   });
-  return $c__10686__auto__$jscomp$5$$;
+  return $c__8515__auto__$$;
 }
 function $rsstonews$server$set_data$$($req$jscomp$2$$, $res$jscomp$19$$) {
-  var $c__10686__auto__$jscomp$6$$ = $cljs$core$async$chan$cljs$0core$0IFn$0_invoke$0arity$03$$(1);
+  var $c__8515__auto__$jscomp$1$$ = $cljs$core$async$chan$cljs$0core$0IFn$0_invoke$0arity$03$$(1);
   $cljs$core$async$impl$dispatch$run$$(function() {
-    var $f__10687__auto__$jscomp$22$$ = function() {
-      function $switch__10523__auto__$jscomp$24$$($state_12950$$) {
-        var $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$ = $state_12950$$[1];
-        if (1 === $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$) {
-          return $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$ = $rsstonews$server$keyv$$.set("user-data", $req$jscomp$2$$.body), $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$ = $cljs$core$async$interop$p__GT_c$$($inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$), $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_12950$$, 2, $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$);
+    var $f__8516__auto__$jscomp$1$$ = function() {
+      function $switch__8492__auto__$jscomp$1$$($state_8633$$) {
+        var $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$ = $state_8633$$[1];
+        if (1 === $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$) {
+          return $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$ = $rsstonews$server$keyv$$.set("user-data", $req$jscomp$2$$.body), $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$ = $cljs$core$async$interop$p__GT_c$$($inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$), $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_8633$$, 2, $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$);
         }
-        if (2 === $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$) {
-          $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$ = $state_12950$$[2];
-          var $inst_12938$$ = $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$ instanceof $cljs$core$ExceptionInfo$$, $inst_12940_inst_12941$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$));
-          $inst_12940_inst_12941$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_12940_inst_12941$$, $cljs$cst$keyword$promise_DASH_error$$);
-          $state_12950$$[7] = $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$;
-          $state_12950$$[1] = $cljs$core$truth_$$($inst_12938$$ && $inst_12940_inst_12941$$) ? 3 : 4;
+        if (2 === $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$) {
+          $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$ = $state_8633$$[2];
+          var $inst_8621$$ = $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$ instanceof $cljs$core$ExceptionInfo$$, $inst_8623_inst_8624$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$));
+          $inst_8623_inst_8624$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_8623_inst_8624$$, $cljs$cst$keyword$promise_DASH_error$$);
+          $state_8633$$[7] = $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$;
+          $state_8633$$[1] = $cljs$core$truth_$$($inst_8621$$ && $inst_8623_inst_8624$$) ? 3 : 4;
           return $cljs$cst$keyword$recur$$;
         }
-        if (3 === $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$) {
-          throw $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$ = $state_12950$$[7], $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$;
+        if (3 === $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$) {
+          throw $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$ = $state_8633$$[7], $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$;
         }
-        return 4 === $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$ ? ($inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$ = $state_12950$$[7], $state_12950$$[2] = $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$, $state_12950$$[1] = 5, $cljs$cst$keyword$recur$$) : 5 === $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$ ? ($inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$ = 
-        $res$jscomp$19$$.json($state_12950$$[2]), $cljs$core$async$impl$ioc_helpers$return_chan$$($state_12950$$, $inst_12934_inst_12935_inst_12937_inst_12937__$1_inst_12948_state_val_12951$$)) : null;
+        return 4 === $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$ ? ($inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$ = $state_8633$$[7], $state_8633$$[2] = $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$, $state_8633$$[1] = 5, $cljs$cst$keyword$recur$$) : 5 === $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$ ? ($inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$ = $res$jscomp$19$$.json($state_8633$$[2]), 
+        $cljs$core$async$impl$ioc_helpers$return_chan$$($state_8633$$, $inst_8617_inst_8618_inst_8620_inst_8620__$1_inst_8631_state_val_8634$$)) : null;
       }
       return function() {
-        function $rsstonews$server$set_data_$_state_machine__10524__auto____1$$($state_12950$jscomp$1$$) {
+        function $rsstonews$server$set_data_$_state_machine__8493__auto____1$$($state_8633$jscomp$1$$) {
           for (;;) {
             a: {
               try {
                 for (;;) {
-                  var $result__10526__auto__$jscomp$inline_789$$ = $switch__10523__auto__$jscomp$24$$($state_12950$jscomp$1$$);
-                  if (!$cljs$core$keyword_identical_QMARK_$$($result__10526__auto__$jscomp$inline_789$$, $cljs$cst$keyword$recur$$)) {
-                    var $ex__10527__auto__$jscomp$inline_790_ret_value__10525__auto__$jscomp$22$$ = $result__10526__auto__$jscomp$inline_789$$;
+                  var $result__8495__auto__$jscomp$inline_789$$ = $switch__8492__auto__$jscomp$1$$($state_8633$jscomp$1$$);
+                  if (!$cljs$core$keyword_identical_QMARK_$$($result__8495__auto__$jscomp$inline_789$$, $cljs$cst$keyword$recur$$)) {
+                    var $ex__8496__auto__$jscomp$inline_790_ret_value__8494__auto__$jscomp$1$$ = $result__8495__auto__$jscomp$inline_789$$;
                     break a;
                   }
                 }
-              } catch ($e12979$jscomp$inline_791$$) {
-                $ex__10527__auto__$jscomp$inline_790_ret_value__10525__auto__$jscomp$22$$ = $e12979$jscomp$inline_791$$;
-                $state_12950$jscomp$1$$[2] = $ex__10527__auto__$jscomp$inline_790_ret_value__10525__auto__$jscomp$22$$;
-                if ($cljs$core$seq$$($state_12950$jscomp$1$$[4])) {
-                  $state_12950$jscomp$1$$[1] = $cljs$core$first$$($state_12950$jscomp$1$$[4]);
+              } catch ($e8641$jscomp$inline_791$$) {
+                $ex__8496__auto__$jscomp$inline_790_ret_value__8494__auto__$jscomp$1$$ = $e8641$jscomp$inline_791$$;
+                $state_8633$jscomp$1$$[2] = $ex__8496__auto__$jscomp$inline_790_ret_value__8494__auto__$jscomp$1$$;
+                if ($cljs$core$seq$$($state_8633$jscomp$1$$[4])) {
+                  $state_8633$jscomp$1$$[1] = $cljs$core$first$$($state_8633$jscomp$1$$[4]);
                 } else {
-                  throw $ex__10527__auto__$jscomp$inline_790_ret_value__10525__auto__$jscomp$22$$;
+                  throw $ex__8496__auto__$jscomp$inline_790_ret_value__8494__auto__$jscomp$1$$;
                 }
-                $ex__10527__auto__$jscomp$inline_790_ret_value__10525__auto__$jscomp$22$$ = $cljs$cst$keyword$recur$$;
+                $ex__8496__auto__$jscomp$inline_790_ret_value__8494__auto__$jscomp$1$$ = $cljs$cst$keyword$recur$$;
               }
             }
-            if (!$cljs$core$keyword_identical_QMARK_$$($ex__10527__auto__$jscomp$inline_790_ret_value__10525__auto__$jscomp$22$$, $cljs$cst$keyword$recur$$)) {
-              return $ex__10527__auto__$jscomp$inline_790_ret_value__10525__auto__$jscomp$22$$;
+            if (!$cljs$core$keyword_identical_QMARK_$$($ex__8496__auto__$jscomp$inline_790_ret_value__8494__auto__$jscomp$1$$, $cljs$cst$keyword$recur$$)) {
+              return $ex__8496__auto__$jscomp$inline_790_ret_value__8494__auto__$jscomp$1$$;
             }
           }
         }
-        function $rsstonews$server$set_data_$_state_machine__10524__auto____0$$() {
-          var $statearr_12977$$ = [null, null, null, null, null, null, null, null];
-          $statearr_12977$$[0] = $rsstonews$server$set_data_$_state_machine__10524__auto__$$;
-          $statearr_12977$$[1] = 1;
-          return $statearr_12977$$;
+        function $rsstonews$server$set_data_$_state_machine__8493__auto____0$$() {
+          var $statearr_8640$$ = [null, null, null, null, null, null, null, null];
+          $statearr_8640$$[0] = $rsstonews$server$set_data_$_state_machine__8493__auto__$$;
+          $statearr_8640$$[1] = 1;
+          return $statearr_8640$$;
         }
-        var $rsstonews$server$set_data_$_state_machine__10524__auto__$$ = null;
-        $rsstonews$server$set_data_$_state_machine__10524__auto__$$ = function($state_12950$jscomp$2$$) {
+        var $rsstonews$server$set_data_$_state_machine__8493__auto__$$ = null;
+        $rsstonews$server$set_data_$_state_machine__8493__auto__$$ = function($state_8633$jscomp$2$$) {
           switch(arguments.length) {
             case 0:
-              return $rsstonews$server$set_data_$_state_machine__10524__auto____0$$.call(this);
+              return $rsstonews$server$set_data_$_state_machine__8493__auto____0$$.call(this);
             case 1:
-              return $rsstonews$server$set_data_$_state_machine__10524__auto____1$$.call(this, $state_12950$jscomp$2$$);
+              return $rsstonews$server$set_data_$_state_machine__8493__auto____1$$.call(this, $state_8633$jscomp$2$$);
           }
           throw Error("Invalid arity: " + arguments.length);
         };
-        $rsstonews$server$set_data_$_state_machine__10524__auto__$$.$cljs$core$IFn$_invoke$arity$0$ = $rsstonews$server$set_data_$_state_machine__10524__auto____0$$;
-        $rsstonews$server$set_data_$_state_machine__10524__auto__$$.$cljs$core$IFn$_invoke$arity$1$ = $rsstonews$server$set_data_$_state_machine__10524__auto____1$$;
-        return $rsstonews$server$set_data_$_state_machine__10524__auto__$$;
+        $rsstonews$server$set_data_$_state_machine__8493__auto__$$.$cljs$core$IFn$_invoke$arity$0$ = $rsstonews$server$set_data_$_state_machine__8493__auto____0$$;
+        $rsstonews$server$set_data_$_state_machine__8493__auto__$$.$cljs$core$IFn$_invoke$arity$1$ = $rsstonews$server$set_data_$_state_machine__8493__auto____1$$;
+        return $rsstonews$server$set_data_$_state_machine__8493__auto__$$;
       }();
-    }(), $state__10688__auto__$jscomp$22$$ = function() {
-      var $statearr_12986$$ = $f__10687__auto__$jscomp$22$$();
-      $statearr_12986$$[6] = $c__10686__auto__$jscomp$6$$;
-      return $statearr_12986$$;
+    }(), $state__8517__auto__$jscomp$1$$ = function() {
+      var $statearr_8644$$ = $f__8516__auto__$jscomp$1$$();
+      $statearr_8644$$[6] = $c__8515__auto__$jscomp$1$$;
+      return $statearr_8644$$;
     }();
-    return $cljs$core$async$impl$ioc_helpers$run_state_machine_wrapped$$($state__10688__auto__$jscomp$22$$);
+    return $cljs$core$async$impl$ioc_helpers$run_state_machine_wrapped$$($state__8517__auto__$jscomp$1$$);
   });
-  return $c__10686__auto__$jscomp$6$$;
+  return $c__8515__auto__$jscomp$1$$;
 }
 function $rsstonews$server$set_password$$($req$jscomp$3$$, $res$jscomp$20$$) {
-  var $c__10686__auto__$jscomp$7$$ = $cljs$core$async$chan$cljs$0core$0IFn$0_invoke$0arity$03$$(1);
+  var $c__8515__auto__$jscomp$2$$ = $cljs$core$async$chan$cljs$0core$0IFn$0_invoke$0arity$03$$(1);
   $cljs$core$async$impl$dispatch$run$$(function() {
-    var $f__10687__auto__$jscomp$23$$ = function() {
-      function $switch__10523__auto__$jscomp$25$$($state_13035$$) {
-        var $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $state_13035$$[1];
-        if (7 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$) {
-          return $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $res$jscomp$20$$.status(403).json({error:"Password already set"}), $state_13035$$[2] = $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$, $state_13035$$[1] = 8, $cljs$cst$keyword$recur$$;
+    var $f__8516__auto__$jscomp$2$$ = function() {
+      function $switch__8492__auto__$jscomp$2$$($state_8683$$) {
+        var $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $state_8683$$[1];
+        if (7 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$) {
+          return $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $res$jscomp$20$$.status(403).json({error:"Password already set"}), $state_8683$$[2] = $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$, $state_8683$$[1] = 8, $cljs$cst$keyword$recur$$;
         }
-        if (1 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$) {
-          return $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $rsstonews$server$keyv$$.get("password"), $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $cljs$core$async$interop$p__GT_c$$($inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$), 
-          $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_13035$$, 2, $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$);
+        if (1 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$) {
+          return $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $rsstonews$server$keyv$$.get("password"), $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $cljs$core$async$interop$p__GT_c$$($inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$), $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_8683$$, 
+          2, $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$);
         }
-        if (4 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$) {
-          return $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $state_13035$$[7], $state_13035$$[2] = $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$, $state_13035$$[1] = 5, $cljs$cst$keyword$recur$$;
+        if (4 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$) {
+          return $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $state_8683$$[7], $state_8683$$[2] = $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$, $state_8683$$[1] = 5, $cljs$cst$keyword$recur$$;
         }
-        if (6 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$) {
-          return $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $rsstonews$server$keyv$$.set("password", $req$jscomp$3$$.body), $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $cljs$core$async$interop$p__GT_c$$($inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$), 
-          $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_13035$$, 9, $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$);
+        if (6 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$) {
+          return $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $rsstonews$server$keyv$$.set("password", $req$jscomp$3$$.body), $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $cljs$core$async$interop$p__GT_c$$($inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$), $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_8683$$, 
+          9, $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$);
         }
-        if (3 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$) {
-          throw $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $state_13035$$[7], $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$;
+        if (3 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$) {
+          throw $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $state_8683$$[7], $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$;
         }
-        if (12 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$) {
-          return $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $res$jscomp$20$$.json($state_13035$$[2]), $state_13035$$[2] = $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$, $state_13035$$[1] = 8, $cljs$cst$keyword$recur$$;
+        if (12 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$) {
+          return $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $res$jscomp$20$$.json($state_8683$$[2]), $state_8683$$[2] = $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$, $state_8683$$[1] = 8, $cljs$cst$keyword$recur$$;
         }
-        if (2 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$) {
-          $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $state_13035$$[2];
-          var $inst_12998_inst_13017$$ = $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ instanceof $cljs$core$ExceptionInfo$$, $inst_13000_inst_13001_inst_13019_inst_13020$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$));
-          $inst_13000_inst_13001_inst_13019_inst_13020$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_13000_inst_13001_inst_13019_inst_13020$$, $cljs$cst$keyword$promise_DASH_error$$);
-          $state_13035$$[7] = $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$;
-          $state_13035$$[1] = $cljs$core$truth_$$($inst_12998_inst_13017$$ && $inst_13000_inst_13001_inst_13019_inst_13020$$) ? 3 : 4;
+        if (2 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$) {
+          $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $state_8683$$[2];
+          var $inst_8649_inst_8666$$ = $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ instanceof $cljs$core$ExceptionInfo$$, $inst_8651_inst_8652_inst_8668_inst_8669$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$));
+          $inst_8651_inst_8652_inst_8668_inst_8669$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_8651_inst_8652_inst_8668_inst_8669$$, $cljs$cst$keyword$promise_DASH_error$$);
+          $state_8683$$[7] = $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$;
+          $state_8683$$[1] = $cljs$core$truth_$$($inst_8649_inst_8666$$ && $inst_8651_inst_8652_inst_8668_inst_8669$$) ? 3 : 4;
           return $cljs$cst$keyword$recur$$;
         }
-        if (11 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$) {
-          return $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $state_13035$$[8], $state_13035$$[2] = $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$, $state_13035$$[1] = 12, $cljs$cst$keyword$recur$$;
+        if (11 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$) {
+          return $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $state_8683$$[8], $state_8683$$[2] = $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$, $state_8683$$[1] = 12, $cljs$cst$keyword$recur$$;
         }
-        if (9 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$) {
-          return $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $state_13035$$[2], $inst_12998_inst_13017$$ = $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ instanceof $cljs$core$ExceptionInfo$$, $inst_13000_inst_13001_inst_13019_inst_13020$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$)), 
-          $inst_13000_inst_13001_inst_13019_inst_13020$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_13000_inst_13001_inst_13019_inst_13020$$, $cljs$cst$keyword$promise_DASH_error$$), $state_13035$$[8] = $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$, $state_13035$$[1] = $cljs$core$truth_$$($inst_12998_inst_13017$$ && $inst_13000_inst_13001_inst_13019_inst_13020$$) ? 10 : 11, $cljs$cst$keyword$recur$$;
+        if (9 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$) {
+          return $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $state_8683$$[2], $inst_8649_inst_8666$$ = $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ instanceof $cljs$core$ExceptionInfo$$, $inst_8651_inst_8652_inst_8668_inst_8669$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$)), 
+          $inst_8651_inst_8652_inst_8668_inst_8669$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_8651_inst_8652_inst_8668_inst_8669$$, $cljs$cst$keyword$promise_DASH_error$$), $state_8683$$[8] = $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$, $state_8683$$[1] = $cljs$core$truth_$$($inst_8649_inst_8666$$ && $inst_8651_inst_8652_inst_8668_inst_8669$$) ? 10 : 11, $cljs$cst$keyword$recur$$;
         }
-        if (5 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$) {
-          return $state_13035$$[1] = $cljs$core$truth_$$(null == $state_13035$$[2]) ? 6 : 7, $cljs$cst$keyword$recur$$;
+        if (5 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$) {
+          return $state_8683$$[1] = $cljs$core$truth_$$(null == $state_8683$$[2]) ? 6 : 7, $cljs$cst$keyword$recur$$;
         }
-        if (10 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$) {
-          throw $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ = $state_13035$$[8], $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$;
+        if (10 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$) {
+          throw $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ = $state_8683$$[8], $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$;
         }
-        return 8 === $inst_12992_inst_12993_inst_12995_inst_12995__$1_inst_13011_inst_13012_inst_13015_inst_13015__$1_inst_13028_inst_13031_state_val_13036$$ ? $cljs$core$async$impl$ioc_helpers$return_chan$$($state_13035$$, $state_13035$$[2]) : null;
+        return 8 === $inst_8645_inst_8646_inst_8648_inst_8648__$1_inst_8662_inst_8663_inst_8665_inst_8665__$1_inst_8676_inst_8679_state_val_8684$$ ? $cljs$core$async$impl$ioc_helpers$return_chan$$($state_8683$$, $state_8683$$[2]) : null;
       }
       return function() {
-        function $rsstonews$server$set_password_$_state_machine__10524__auto____1$$($state_13035$jscomp$1$$) {
+        function $rsstonews$server$set_password_$_state_machine__8493__auto____1$$($state_8683$jscomp$1$$) {
           for (;;) {
             a: {
               try {
                 for (;;) {
-                  var $result__10526__auto__$jscomp$inline_797$$ = $switch__10523__auto__$jscomp$25$$($state_13035$jscomp$1$$);
-                  if (!$cljs$core$keyword_identical_QMARK_$$($result__10526__auto__$jscomp$inline_797$$, $cljs$cst$keyword$recur$$)) {
-                    var $ex__10527__auto__$jscomp$inline_798_ret_value__10525__auto__$jscomp$23$$ = $result__10526__auto__$jscomp$inline_797$$;
+                  var $result__8495__auto__$jscomp$inline_797$$ = $switch__8492__auto__$jscomp$2$$($state_8683$jscomp$1$$);
+                  if (!$cljs$core$keyword_identical_QMARK_$$($result__8495__auto__$jscomp$inline_797$$, $cljs$cst$keyword$recur$$)) {
+                    var $ex__8496__auto__$jscomp$inline_798_ret_value__8494__auto__$jscomp$2$$ = $result__8495__auto__$jscomp$inline_797$$;
                     break a;
                   }
                 }
-              } catch ($e13074$jscomp$inline_799$$) {
-                $ex__10527__auto__$jscomp$inline_798_ret_value__10525__auto__$jscomp$23$$ = $e13074$jscomp$inline_799$$;
-                $state_13035$jscomp$1$$[2] = $ex__10527__auto__$jscomp$inline_798_ret_value__10525__auto__$jscomp$23$$;
-                if ($cljs$core$seq$$($state_13035$jscomp$1$$[4])) {
-                  $state_13035$jscomp$1$$[1] = $cljs$core$first$$($state_13035$jscomp$1$$[4]);
+              } catch ($e8700$jscomp$inline_799$$) {
+                $ex__8496__auto__$jscomp$inline_798_ret_value__8494__auto__$jscomp$2$$ = $e8700$jscomp$inline_799$$;
+                $state_8683$jscomp$1$$[2] = $ex__8496__auto__$jscomp$inline_798_ret_value__8494__auto__$jscomp$2$$;
+                if ($cljs$core$seq$$($state_8683$jscomp$1$$[4])) {
+                  $state_8683$jscomp$1$$[1] = $cljs$core$first$$($state_8683$jscomp$1$$[4]);
                 } else {
-                  throw $ex__10527__auto__$jscomp$inline_798_ret_value__10525__auto__$jscomp$23$$;
+                  throw $ex__8496__auto__$jscomp$inline_798_ret_value__8494__auto__$jscomp$2$$;
                 }
-                $ex__10527__auto__$jscomp$inline_798_ret_value__10525__auto__$jscomp$23$$ = $cljs$cst$keyword$recur$$;
+                $ex__8496__auto__$jscomp$inline_798_ret_value__8494__auto__$jscomp$2$$ = $cljs$cst$keyword$recur$$;
               }
             }
-            if (!$cljs$core$keyword_identical_QMARK_$$($ex__10527__auto__$jscomp$inline_798_ret_value__10525__auto__$jscomp$23$$, $cljs$cst$keyword$recur$$)) {
-              return $ex__10527__auto__$jscomp$inline_798_ret_value__10525__auto__$jscomp$23$$;
+            if (!$cljs$core$keyword_identical_QMARK_$$($ex__8496__auto__$jscomp$inline_798_ret_value__8494__auto__$jscomp$2$$, $cljs$cst$keyword$recur$$)) {
+              return $ex__8496__auto__$jscomp$inline_798_ret_value__8494__auto__$jscomp$2$$;
             }
           }
         }
-        function $rsstonews$server$set_password_$_state_machine__10524__auto____0$$() {
-          var $statearr_13073$$ = [null, null, null, null, null, null, null, null, null];
-          $statearr_13073$$[0] = $rsstonews$server$set_password_$_state_machine__10524__auto__$$;
-          $statearr_13073$$[1] = 1;
-          return $statearr_13073$$;
+        function $rsstonews$server$set_password_$_state_machine__8493__auto____0$$() {
+          var $statearr_8699$$ = [null, null, null, null, null, null, null, null, null];
+          $statearr_8699$$[0] = $rsstonews$server$set_password_$_state_machine__8493__auto__$$;
+          $statearr_8699$$[1] = 1;
+          return $statearr_8699$$;
         }
-        var $rsstonews$server$set_password_$_state_machine__10524__auto__$$ = null;
-        $rsstonews$server$set_password_$_state_machine__10524__auto__$$ = function($state_13035$jscomp$2$$) {
+        var $rsstonews$server$set_password_$_state_machine__8493__auto__$$ = null;
+        $rsstonews$server$set_password_$_state_machine__8493__auto__$$ = function($state_8683$jscomp$2$$) {
           switch(arguments.length) {
             case 0:
-              return $rsstonews$server$set_password_$_state_machine__10524__auto____0$$.call(this);
+              return $rsstonews$server$set_password_$_state_machine__8493__auto____0$$.call(this);
             case 1:
-              return $rsstonews$server$set_password_$_state_machine__10524__auto____1$$.call(this, $state_13035$jscomp$2$$);
+              return $rsstonews$server$set_password_$_state_machine__8493__auto____1$$.call(this, $state_8683$jscomp$2$$);
           }
           throw Error("Invalid arity: " + arguments.length);
         };
-        $rsstonews$server$set_password_$_state_machine__10524__auto__$$.$cljs$core$IFn$_invoke$arity$0$ = $rsstonews$server$set_password_$_state_machine__10524__auto____0$$;
-        $rsstonews$server$set_password_$_state_machine__10524__auto__$$.$cljs$core$IFn$_invoke$arity$1$ = $rsstonews$server$set_password_$_state_machine__10524__auto____1$$;
-        return $rsstonews$server$set_password_$_state_machine__10524__auto__$$;
+        $rsstonews$server$set_password_$_state_machine__8493__auto__$$.$cljs$core$IFn$_invoke$arity$0$ = $rsstonews$server$set_password_$_state_machine__8493__auto____0$$;
+        $rsstonews$server$set_password_$_state_machine__8493__auto__$$.$cljs$core$IFn$_invoke$arity$1$ = $rsstonews$server$set_password_$_state_machine__8493__auto____1$$;
+        return $rsstonews$server$set_password_$_state_machine__8493__auto__$$;
       }();
-    }(), $state__10688__auto__$jscomp$23$$ = function() {
-      var $statearr_13080$$ = $f__10687__auto__$jscomp$23$$();
-      $statearr_13080$$[6] = $c__10686__auto__$jscomp$7$$;
-      return $statearr_13080$$;
+    }(), $state__8517__auto__$jscomp$2$$ = function() {
+      var $statearr_8703$$ = $f__8516__auto__$jscomp$2$$();
+      $statearr_8703$$[6] = $c__8515__auto__$jscomp$2$$;
+      return $statearr_8703$$;
     }();
-    return $cljs$core$async$impl$ioc_helpers$run_state_machine_wrapped$$($state__10688__auto__$jscomp$23$$);
+    return $cljs$core$async$impl$ioc_helpers$run_state_machine_wrapped$$($state__8517__auto__$jscomp$2$$);
   });
-  return $c__10686__auto__$jscomp$7$$;
+  return $c__8515__auto__$jscomp$2$$;
 }
 function $rsstonews$server$login$$($req$jscomp$4$$, $res$jscomp$21$$) {
   return $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($req$jscomp$4$$.body.password, $rsstonews$server$site_password$$) ? ($req$jscomp$4$$.$session$.authenticated = !0, $res$jscomp$21$$.json(!0)) : $res$jscomp$21$$.status(403).json({error:"Incorrect password"});
@@ -7453,10 +7453,10 @@ function $rsstonews$server$cors_proxy$$($req$jscomp$6$$, $res$jscomp$23$$) {
     return $cljs$core$truth_$$($r$jscomp$46$$) ? $r$jscomp$46$$.text().then(function($text$jscomp$16$$) {
       return [$text$jscomp$16$$, $r$jscomp$46$$];
     }) : null;
-  }).then(function($f$jscomp$418_p__13097$$) {
-    var $text$jscomp$17$$ = $cljs$core$nth$cljs$0core$0IFn$0_invoke$0arity$03$$($f$jscomp$418_p__13097$$, 0, null);
-    $f$jscomp$418_p__13097$$ = $cljs$core$nth$cljs$0core$0IFn$0_invoke$0arity$03$$($f$jscomp$418_p__13097$$, 1, null);
-    return $cljs$core$truth_$$($f$jscomp$418_p__13097$$) ? ($f$jscomp$418_p__13097$$.headers.entries(), $res$jscomp$23$$.status($f$jscomp$418_p__13097$$.status), $res$jscomp$23$$.send($text$jscomp$17$$)) : null;
+  }).then(function($f$jscomp$418_p__8704$$) {
+    var $text$jscomp$17$$ = $cljs$core$nth$cljs$0core$0IFn$0_invoke$0arity$03$$($f$jscomp$418_p__8704$$, 0, null);
+    $f$jscomp$418_p__8704$$ = $cljs$core$nth$cljs$0core$0IFn$0_invoke$0arity$03$$($f$jscomp$418_p__8704$$, 1, null);
+    return $cljs$core$truth_$$($f$jscomp$418_p__8704$$) ? ($f$jscomp$418_p__8704$$.headers.entries(), $res$jscomp$23$$.status($f$jscomp$418_p__8704$$.status), $res$jscomp$23$$.send($text$jscomp$17$$)) : null;
   });
 }
 function $rsstonews$server$append_subscription_text$$($text$jscomp$18$$, $subscribe_url$$, $unsubscribe_url$jscomp$1$$) {
@@ -7469,65 +7469,65 @@ function $rsstonews$server$append_subscription_html$$($html$jscomp$22$$, $subscr
 function $rsstonews$server$send_emails$$($req$jscomp$7$$, $res$jscomp$24$$) {
   var $text$jscomp$19$$ = $req$jscomp$7$$.body.text, $html$jscomp$23$$ = $req$jscomp$7$$.body.html, $subject$jscomp$1$$ = $req$jscomp$7$$.body.subject, $recipients$$ = $req$jscomp$7$$.body.recipients;
   console.log("send-emails");
-  var $c__10686__auto__$jscomp$8$$ = $cljs$core$async$chan$cljs$0core$0IFn$0_invoke$0arity$03$$(1);
+  var $c__8515__auto__$jscomp$3$$ = $cljs$core$async$chan$cljs$0core$0IFn$0_invoke$0arity$03$$(1);
   $cljs$core$async$impl$dispatch$run$$(function() {
-    var $f__10687__auto__$jscomp$24$$ = function() {
-      function $switch__10523__auto__$jscomp$26$$($state_13183$$) {
-        var $state_val_13184$$ = $state_13183$$[1];
-        if (7 === $state_val_13184$$) {
-          var $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $state_13183$$[7];
-          throw $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$;
+    var $f__8516__auto__$jscomp$3$$ = function() {
+      function $switch__8492__auto__$jscomp$3$$($state_8755$$) {
+        var $state_val_8756$$ = $state_8755$$[1];
+        if (7 === $state_val_8756$$) {
+          var $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $state_8755$$[7];
+          throw $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$;
         }
-        if (1 === $state_val_13184$$) {
-          return $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $rsstonews$mail$create$$(), $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $cljs$core$async$interop$p__GT_c$$($inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$), $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_13183$$, 
-          2, $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$);
+        if (1 === $state_val_8756$$) {
+          return $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $rsstonews$mail$create$$(), $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $cljs$core$async$interop$p__GT_c$$($inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$), $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_8755$$, 
+          2, $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$);
         }
-        if (4 === $state_val_13184$$) {
-          return $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $state_13183$$[8], $state_13183$$[2] = $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$, $state_13183$$[1] = 5, $cljs$cst$keyword$recur$$;
+        if (4 === $state_val_8756$$) {
+          return $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $state_8755$$[8], $state_8755$$[2] = $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$, $state_8755$$[1] = 5, $cljs$cst$keyword$recur$$;
         }
-        if (6 === $state_val_13184$$) {
-          $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $state_13183$$[7];
-          $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $state_13183$$[2];
-          var $inst_13146_inst_13169$$ = $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ instanceof $cljs$core$ExceptionInfo$$, $inst_13148_inst_13149_inst_13171_inst_13172$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$));
-          $inst_13148_inst_13149_inst_13171_inst_13172$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_13148_inst_13149_inst_13171_inst_13172$$, $cljs$cst$keyword$promise_DASH_error$$);
-          $state_13183$$[7] = $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$;
-          $state_13183$$[1] = $cljs$core$truth_$$($inst_13146_inst_13169$$ && $inst_13148_inst_13149_inst_13171_inst_13172$$) ? 7 : 8;
+        if (6 === $state_val_8756$$) {
+          $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $state_8755$$[7];
+          $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $state_8755$$[2];
+          var $inst_8722_inst_8743$$ = $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ instanceof $cljs$core$ExceptionInfo$$, $inst_8724_inst_8725_inst_8745_inst_8746$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$));
+          $inst_8724_inst_8725_inst_8745_inst_8746$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_8724_inst_8725_inst_8745_inst_8746$$, $cljs$cst$keyword$promise_DASH_error$$);
+          $state_8755$$[7] = $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$;
+          $state_8755$$[1] = $cljs$core$truth_$$($inst_8722_inst_8743$$ && $inst_8724_inst_8725_inst_8745_inst_8746$$) ? 7 : 8;
           return $cljs$cst$keyword$recur$$;
         }
-        if (3 === $state_val_13184$$) {
-          throw $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $state_13183$$[8], $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$;
+        if (3 === $state_val_8756$$) {
+          throw $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $state_8755$$[8], $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$;
         }
-        if (2 === $state_val_13184$$) {
-          return $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $state_13183$$[8], $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $state_13183$$[2], $inst_13146_inst_13169$$ = $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ instanceof $cljs$core$ExceptionInfo$$, 
-          $inst_13148_inst_13149_inst_13171_inst_13172$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$)), $inst_13148_inst_13149_inst_13171_inst_13172$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_13148_inst_13149_inst_13171_inst_13172$$, $cljs$cst$keyword$promise_DASH_error$$), $state_13183$$[8] = $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$, 
-          $state_13183$$[1] = $cljs$core$truth_$$($inst_13146_inst_13169$$ && $inst_13148_inst_13149_inst_13171_inst_13172$$) ? 3 : 4, $cljs$cst$keyword$recur$$;
+        if (2 === $state_val_8756$$) {
+          return $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $state_8755$$[8], $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $state_8755$$[2], $inst_8722_inst_8743$$ = $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ instanceof $cljs$core$ExceptionInfo$$, $inst_8724_inst_8725_inst_8745_inst_8746$$ = 
+          $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$)), $inst_8724_inst_8725_inst_8745_inst_8746$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($inst_8724_inst_8725_inst_8745_inst_8746$$, $cljs$cst$keyword$promise_DASH_error$$), $state_8755$$[8] = $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$, 
+          $state_8755$$[1] = $cljs$core$truth_$$($inst_8722_inst_8743$$ && $inst_8724_inst_8725_inst_8745_inst_8746$$) ? 3 : 4, $cljs$cst$keyword$recur$$;
         }
-        if (9 === $state_val_13184$$) {
-          return $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $res$jscomp$24$$.json($state_13183$$[2]), $cljs$core$async$impl$ioc_helpers$return_chan$$($state_13183$$, $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$);
+        if (9 === $state_val_8756$$) {
+          return $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $res$jscomp$24$$.json($state_8755$$[2]), $cljs$core$async$impl$ioc_helpers$return_chan$$($state_8755$$, $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$);
         }
-        if (5 === $state_val_13184$$) {
-          var $inst_13155$$ = $state_13183$$[2];
-          $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = function() {
-            return function $rsstonews$server$send_emails_$_iter__13156$$($s__13157$$) {
+        if (5 === $state_val_8756$$) {
+          var $inst_8731$$ = $state_8755$$[2];
+          $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = function() {
+            return function $rsstonews$server$send_emails_$_iter__8732$$($s__8733$$) {
               return new $cljs$core$LazySeq$$(null, function() {
                 for (;;) {
-                  var $temp__5735__auto__$jscomp$36$$ = $cljs$core$seq$$($s__13157$$);
+                  var $temp__5735__auto__$jscomp$36$$ = $cljs$core$seq$$($s__8733$$);
                   if ($temp__5735__auto__$jscomp$36$$) {
-                    var $s__13157__$2$$ = $temp__5735__auto__$jscomp$36$$;
-                    if ($cljs$core$chunked_seq_QMARK_$$($s__13157__$2$$)) {
-                      var $c__4527__auto__$jscomp$1$$ = $cljs$core$_chunked_first$$($s__13157__$2$$), $size__4528__auto__$jscomp$1$$ = $cljs$core$count$$($c__4527__auto__$jscomp$1$$), $b__13159$$ = new $cljs$core$ChunkBuffer$$(Array($size__4528__auto__$jscomp$1$$));
+                    var $s__8733__$2$$ = $temp__5735__auto__$jscomp$36$$;
+                    if ($cljs$core$chunked_seq_QMARK_$$($s__8733__$2$$)) {
+                      var $c__4527__auto__$jscomp$1$$ = $cljs$core$_chunked_first$$($s__8733__$2$$), $size__4528__auto__$jscomp$1$$ = $cljs$core$count$$($c__4527__auto__$jscomp$1$$), $b__8735$$ = new $cljs$core$ChunkBuffer$$(Array($size__4528__auto__$jscomp$1$$));
                       return function() {
-                        for (var $i__13158$$ = 0;;) {
-                          if ($i__13158$$ < $size__4528__auto__$jscomp$1$$) {
-                            var $r$jscomp$48$$ = $cljs$core$_nth$$($c__4527__auto__$jscomp$1$$, $i__13158$$);
-                            $cljs$core$chunk_append$$($b__13159$$, function() {
+                        for (var $i__8734$$ = 0;;) {
+                          if ($i__8734$$ < $size__4528__auto__$jscomp$1$$) {
+                            var $r$jscomp$48$$ = $cljs$core$_nth$$($c__4527__auto__$jscomp$1$$, $i__8734$$);
+                            $cljs$core$chunk_append$$($b__8735$$, function() {
                               var $to$jscomp$14$$ = $r$jscomp$48$$.email, $subscribe_url$jscomp$2$$ = $r$jscomp$48$$.list["subscribe-url"], $unsubscribe_url$jscomp$3$$ = $r$jscomp$48$$.unsubscribe, $text__$1$$ = $rsstonews$server$append_subscription_text$$($text$jscomp$19$$, $subscribe_url$jscomp$2$$, $unsubscribe_url$jscomp$3$$), $html__$1$$ = $rsstonews$server$append_subscription_html$$($html$jscomp$23$$, $subscribe_url$jscomp$2$$, $unsubscribe_url$jscomp$3$$);
                               console.log("Sending to:", $to$jscomp$14$$, $subject$jscomp$1$$);
-                              return $rsstonews$mail$send_mail$$($inst_13155$$, $to$jscomp$14$$, $subject$jscomp$1$$, $html__$1$$, $text__$1$$, $unsubscribe_url$jscomp$3$$).catch(function() {
+                              return $rsstonews$mail$send_mail$$($inst_8731$$, $to$jscomp$14$$, $subject$jscomp$1$$, $html__$1$$, $text__$1$$, $unsubscribe_url$jscomp$3$$).catch(function() {
                                 return function($err$jscomp$10$$) {
                                   return $err$jscomp$10$$;
                                 };
-                              }($i__13158$$, $to$jscomp$14$$, $subscribe_url$jscomp$2$$, $unsubscribe_url$jscomp$3$$, $text__$1$$, $html__$1$$, $r$jscomp$48$$, $c__4527__auto__$jscomp$1$$, $size__4528__auto__$jscomp$1$$, $b__13159$$, $s__13157__$2$$, $temp__5735__auto__$jscomp$36$$, $inst_13155$$, $inst_13155$$, $state_val_13184$$, $c__10686__auto__$jscomp$8$$, $text$jscomp$19$$, $html$jscomp$23$$, $subject$jscomp$1$$, $recipients$$, $rsstonews$server$site_from_address$$)).then(function($i__13158$jscomp$2$$, 
+                              }($i__8734$$, $to$jscomp$14$$, $subscribe_url$jscomp$2$$, $unsubscribe_url$jscomp$3$$, $text__$1$$, $html__$1$$, $r$jscomp$48$$, $c__4527__auto__$jscomp$1$$, $size__4528__auto__$jscomp$1$$, $b__8735$$, $s__8733__$2$$, $temp__5735__auto__$jscomp$36$$, $inst_8731$$, $inst_8731$$, $state_val_8756$$, $c__8515__auto__$jscomp$3$$, $text$jscomp$19$$, $html$jscomp$23$$, $subject$jscomp$1$$, $recipients$$, $rsstonews$server$site_from_address$$)).then(function($i__8734$jscomp$2$$, 
                               $to$jscomp$16$$) {
                                 return function($sent$$) {
                                   console.log("sent:", $sent$$.accepted);
@@ -7540,24 +7540,24 @@ function $rsstonews$server$send_emails$$($req$jscomp$7$$, $res$jscomp$24$$) {
                                   }
                                   return $sent$$;
                                 };
-                              }($i__13158$$, $to$jscomp$14$$, $subscribe_url$jscomp$2$$, $unsubscribe_url$jscomp$3$$, $text__$1$$, $html__$1$$, $r$jscomp$48$$, $c__4527__auto__$jscomp$1$$, $size__4528__auto__$jscomp$1$$, $b__13159$$, $s__13157__$2$$, $temp__5735__auto__$jscomp$36$$, $inst_13155$$, $inst_13155$$, $state_val_13184$$, $c__10686__auto__$jscomp$8$$, $text$jscomp$19$$, $html$jscomp$23$$, $subject$jscomp$1$$, $recipients$$, $rsstonews$server$site_from_address$$));
+                              }($i__8734$$, $to$jscomp$14$$, $subscribe_url$jscomp$2$$, $unsubscribe_url$jscomp$3$$, $text__$1$$, $html__$1$$, $r$jscomp$48$$, $c__4527__auto__$jscomp$1$$, $size__4528__auto__$jscomp$1$$, $b__8735$$, $s__8733__$2$$, $temp__5735__auto__$jscomp$36$$, $inst_8731$$, $inst_8731$$, $state_val_8756$$, $c__8515__auto__$jscomp$3$$, $text$jscomp$19$$, $html$jscomp$23$$, $subject$jscomp$1$$, $recipients$$, $rsstonews$server$site_from_address$$));
                             }());
-                            $i__13158$$ += 1;
+                            $i__8734$$ += 1;
                           } else {
                             return !0;
                           }
                         }
-                      }() ? $cljs$core$chunk_cons$$($b__13159$$.$chunk$(), $rsstonews$server$send_emails_$_iter__13156$$($cljs$core$_chunked_rest$$($s__13157__$2$$))) : $cljs$core$chunk_cons$$($b__13159$$.$chunk$(), null);
+                      }() ? $cljs$core$chunk_cons$$($b__8735$$.$chunk$(), $rsstonews$server$send_emails_$_iter__8732$$($cljs$core$_chunked_rest$$($s__8733__$2$$))) : $cljs$core$chunk_cons$$($b__8735$$.$chunk$(), null);
                     }
-                    var $r$jscomp$47$$ = $cljs$core$first$$($s__13157__$2$$);
+                    var $r$jscomp$47$$ = $cljs$core$first$$($s__8733__$2$$);
                     return $cljs$core$cons$$(function() {
                       var $to$jscomp$17$$ = $r$jscomp$47$$.email, $subscribe_url$jscomp$5$$ = $r$jscomp$47$$.list["subscribe-url"], $unsubscribe_url$jscomp$6$$ = $r$jscomp$47$$.unsubscribe, $text__$1$jscomp$3$$ = $rsstonews$server$append_subscription_text$$($text$jscomp$19$$, $subscribe_url$jscomp$5$$, $unsubscribe_url$jscomp$6$$), $html__$1$jscomp$3$$ = $rsstonews$server$append_subscription_html$$($html$jscomp$23$$, $subscribe_url$jscomp$5$$, $unsubscribe_url$jscomp$6$$);
                       console.log("Sending to:", $to$jscomp$17$$, $subject$jscomp$1$$);
-                      return $rsstonews$mail$send_mail$$($inst_13155$$, $to$jscomp$17$$, $subject$jscomp$1$$, $html__$1$jscomp$3$$, $text__$1$jscomp$3$$, $unsubscribe_url$jscomp$6$$).catch(function() {
+                      return $rsstonews$mail$send_mail$$($inst_8731$$, $to$jscomp$17$$, $subject$jscomp$1$$, $html__$1$jscomp$3$$, $text__$1$jscomp$3$$, $unsubscribe_url$jscomp$6$$).catch(function() {
                         return function($err$jscomp$12$$) {
                           return $err$jscomp$12$$;
                         };
-                      }($to$jscomp$17$$, $subscribe_url$jscomp$5$$, $unsubscribe_url$jscomp$6$$, $text__$1$jscomp$3$$, $html__$1$jscomp$3$$, $r$jscomp$47$$, $s__13157__$2$$, $temp__5735__auto__$jscomp$36$$, $inst_13155$$, $inst_13155$$, $state_val_13184$$, $c__10686__auto__$jscomp$8$$, $text$jscomp$19$$, $html$jscomp$23$$, $subject$jscomp$1$$, $recipients$$, $rsstonews$server$site_from_address$$)).then(function($to$jscomp$19$$) {
+                      }($to$jscomp$17$$, $subscribe_url$jscomp$5$$, $unsubscribe_url$jscomp$6$$, $text__$1$jscomp$3$$, $html__$1$jscomp$3$$, $r$jscomp$47$$, $s__8733__$2$$, $temp__5735__auto__$jscomp$36$$, $inst_8731$$, $inst_8731$$, $state_val_8756$$, $c__8515__auto__$jscomp$3$$, $text$jscomp$19$$, $html$jscomp$23$$, $subject$jscomp$1$$, $recipients$$, $rsstonews$server$site_from_address$$)).then(function($to$jscomp$19$$) {
                         return function($sent$jscomp$1$$) {
                           console.log("sent:", $sent$jscomp$1$$.accepted);
                           if ($cljs$core$truth_$$($sent$jscomp$1$$.error)) {
@@ -7569,183 +7569,183 @@ function $rsstonews$server$send_emails$$($req$jscomp$7$$, $res$jscomp$24$$) {
                           }
                           return $sent$jscomp$1$$;
                         };
-                      }($to$jscomp$17$$, $subscribe_url$jscomp$5$$, $unsubscribe_url$jscomp$6$$, $text__$1$jscomp$3$$, $html__$1$jscomp$3$$, $r$jscomp$47$$, $s__13157__$2$$, $temp__5735__auto__$jscomp$36$$, $inst_13155$$, $inst_13155$$, $state_val_13184$$, $c__10686__auto__$jscomp$8$$, $text$jscomp$19$$, $html$jscomp$23$$, $subject$jscomp$1$$, $recipients$$, $rsstonews$server$site_from_address$$));
-                    }(), $rsstonews$server$send_emails_$_iter__13156$$($cljs$core$rest$$($s__13157__$2$$)));
+                      }($to$jscomp$17$$, $subscribe_url$jscomp$5$$, $unsubscribe_url$jscomp$6$$, $text__$1$jscomp$3$$, $html__$1$jscomp$3$$, $r$jscomp$47$$, $s__8733__$2$$, $temp__5735__auto__$jscomp$36$$, $inst_8731$$, $inst_8731$$, $state_val_8756$$, $c__8515__auto__$jscomp$3$$, $text$jscomp$19$$, $html$jscomp$23$$, $subject$jscomp$1$$, $recipients$$, $rsstonews$server$site_from_address$$));
+                    }(), $rsstonews$server$send_emails_$_iter__8732$$($cljs$core$rest$$($s__8733__$2$$)));
                   }
                   return null;
                 }
               }, null);
             };
           }()($recipients$$);
-          $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $cljs$core$clj__GT_js$$($inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$);
-          $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = Promise.all($inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$);
-          $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $cljs$core$async$interop$p__GT_c$$($inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$);
-          return $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_13183$$, 6, $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$);
+          $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $cljs$core$clj__GT_js$$($inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$);
+          $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = Promise.all($inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$);
+          $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $cljs$core$async$interop$p__GT_c$$($inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$);
+          return $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_8755$$, 6, $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$);
         }
-        return 8 === $state_val_13184$$ ? ($inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$ = $state_13183$$[7], $state_13183$$[2] = $inst_13141_inst_13142_inst_13144_inst_13144__$1_inst_13162_inst_13164_inst_13165_inst_13166_inst_13168_inst_13168__$1_inst_13179$$, $state_13183$$[1] = 9, $cljs$cst$keyword$recur$$) : null;
+        return 8 === $state_val_8756$$ ? ($inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$ = $state_8755$$[7], $state_8755$$[2] = $inst_8718_inst_8719_inst_8721_inst_8721__$1_inst_8737_inst_8738_inst_8739_inst_8740_inst_8742_inst_8742__$1_inst_8753$$, $state_8755$$[1] = 9, $cljs$cst$keyword$recur$$) : null;
       }
       return function() {
-        function $rsstonews$server$send_emails_$_state_machine__10524__auto____1$$($state_13183$jscomp$1$$) {
+        function $rsstonews$server$send_emails_$_state_machine__8493__auto____1$$($state_8755$jscomp$1$$) {
           for (;;) {
             a: {
               try {
                 for (;;) {
-                  var $result__10526__auto__$jscomp$inline_805$$ = $switch__10523__auto__$jscomp$26$$($state_13183$jscomp$1$$);
-                  if (!$cljs$core$keyword_identical_QMARK_$$($result__10526__auto__$jscomp$inline_805$$, $cljs$cst$keyword$recur$$)) {
-                    var $ex__10527__auto__$jscomp$inline_806_ret_value__10525__auto__$jscomp$24$$ = $result__10526__auto__$jscomp$inline_805$$;
+                  var $result__8495__auto__$jscomp$inline_805$$ = $switch__8492__auto__$jscomp$3$$($state_8755$jscomp$1$$);
+                  if (!$cljs$core$keyword_identical_QMARK_$$($result__8495__auto__$jscomp$inline_805$$, $cljs$cst$keyword$recur$$)) {
+                    var $ex__8496__auto__$jscomp$inline_806_ret_value__8494__auto__$jscomp$3$$ = $result__8495__auto__$jscomp$inline_805$$;
                     break a;
                   }
                 }
-              } catch ($e13251$jscomp$inline_807$$) {
-                $ex__10527__auto__$jscomp$inline_806_ret_value__10525__auto__$jscomp$24$$ = $e13251$jscomp$inline_807$$;
-                $state_13183$jscomp$1$$[2] = $ex__10527__auto__$jscomp$inline_806_ret_value__10525__auto__$jscomp$24$$;
-                if ($cljs$core$seq$$($state_13183$jscomp$1$$[4])) {
-                  $state_13183$jscomp$1$$[1] = $cljs$core$first$$($state_13183$jscomp$1$$[4]);
+              } catch ($e8768$jscomp$inline_807$$) {
+                $ex__8496__auto__$jscomp$inline_806_ret_value__8494__auto__$jscomp$3$$ = $e8768$jscomp$inline_807$$;
+                $state_8755$jscomp$1$$[2] = $ex__8496__auto__$jscomp$inline_806_ret_value__8494__auto__$jscomp$3$$;
+                if ($cljs$core$seq$$($state_8755$jscomp$1$$[4])) {
+                  $state_8755$jscomp$1$$[1] = $cljs$core$first$$($state_8755$jscomp$1$$[4]);
                 } else {
-                  throw $ex__10527__auto__$jscomp$inline_806_ret_value__10525__auto__$jscomp$24$$;
+                  throw $ex__8496__auto__$jscomp$inline_806_ret_value__8494__auto__$jscomp$3$$;
                 }
-                $ex__10527__auto__$jscomp$inline_806_ret_value__10525__auto__$jscomp$24$$ = $cljs$cst$keyword$recur$$;
+                $ex__8496__auto__$jscomp$inline_806_ret_value__8494__auto__$jscomp$3$$ = $cljs$cst$keyword$recur$$;
               }
             }
-            if (!$cljs$core$keyword_identical_QMARK_$$($ex__10527__auto__$jscomp$inline_806_ret_value__10525__auto__$jscomp$24$$, $cljs$cst$keyword$recur$$)) {
-              return $ex__10527__auto__$jscomp$inline_806_ret_value__10525__auto__$jscomp$24$$;
+            if (!$cljs$core$keyword_identical_QMARK_$$($ex__8496__auto__$jscomp$inline_806_ret_value__8494__auto__$jscomp$3$$, $cljs$cst$keyword$recur$$)) {
+              return $ex__8496__auto__$jscomp$inline_806_ret_value__8494__auto__$jscomp$3$$;
             }
           }
         }
-        function $rsstonews$server$send_emails_$_state_machine__10524__auto____0$$() {
-          var $statearr_13247$$ = [null, null, null, null, null, null, null, null, null];
-          $statearr_13247$$[0] = $rsstonews$server$send_emails_$_state_machine__10524__auto__$$;
-          $statearr_13247$$[1] = 1;
-          return $statearr_13247$$;
+        function $rsstonews$server$send_emails_$_state_machine__8493__auto____0$$() {
+          var $statearr_8767$$ = [null, null, null, null, null, null, null, null, null];
+          $statearr_8767$$[0] = $rsstonews$server$send_emails_$_state_machine__8493__auto__$$;
+          $statearr_8767$$[1] = 1;
+          return $statearr_8767$$;
         }
-        var $rsstonews$server$send_emails_$_state_machine__10524__auto__$$ = null;
-        $rsstonews$server$send_emails_$_state_machine__10524__auto__$$ = function($state_13183$jscomp$2$$) {
+        var $rsstonews$server$send_emails_$_state_machine__8493__auto__$$ = null;
+        $rsstonews$server$send_emails_$_state_machine__8493__auto__$$ = function($state_8755$jscomp$2$$) {
           switch(arguments.length) {
             case 0:
-              return $rsstonews$server$send_emails_$_state_machine__10524__auto____0$$.call(this);
+              return $rsstonews$server$send_emails_$_state_machine__8493__auto____0$$.call(this);
             case 1:
-              return $rsstonews$server$send_emails_$_state_machine__10524__auto____1$$.call(this, $state_13183$jscomp$2$$);
+              return $rsstonews$server$send_emails_$_state_machine__8493__auto____1$$.call(this, $state_8755$jscomp$2$$);
           }
           throw Error("Invalid arity: " + arguments.length);
         };
-        $rsstonews$server$send_emails_$_state_machine__10524__auto__$$.$cljs$core$IFn$_invoke$arity$0$ = $rsstonews$server$send_emails_$_state_machine__10524__auto____0$$;
-        $rsstonews$server$send_emails_$_state_machine__10524__auto__$$.$cljs$core$IFn$_invoke$arity$1$ = $rsstonews$server$send_emails_$_state_machine__10524__auto____1$$;
-        return $rsstonews$server$send_emails_$_state_machine__10524__auto__$$;
+        $rsstonews$server$send_emails_$_state_machine__8493__auto__$$.$cljs$core$IFn$_invoke$arity$0$ = $rsstonews$server$send_emails_$_state_machine__8493__auto____0$$;
+        $rsstonews$server$send_emails_$_state_machine__8493__auto__$$.$cljs$core$IFn$_invoke$arity$1$ = $rsstonews$server$send_emails_$_state_machine__8493__auto____1$$;
+        return $rsstonews$server$send_emails_$_state_machine__8493__auto__$$;
       }();
-    }(), $state__10688__auto__$jscomp$24$$ = function() {
-      var $statearr_13260$$ = $f__10687__auto__$jscomp$24$$();
-      $statearr_13260$$[6] = $c__10686__auto__$jscomp$8$$;
-      return $statearr_13260$$;
+    }(), $state__8517__auto__$jscomp$3$$ = function() {
+      var $statearr_8771$$ = $f__8516__auto__$jscomp$3$$();
+      $statearr_8771$$[6] = $c__8515__auto__$jscomp$3$$;
+      return $statearr_8771$$;
     }();
-    return $cljs$core$async$impl$ioc_helpers$run_state_machine_wrapped$$($state__10688__auto__$jscomp$24$$);
+    return $cljs$core$async$impl$ioc_helpers$run_state_machine_wrapped$$($state__8517__auto__$jscomp$3$$);
   });
-  return $c__10686__auto__$jscomp$8$$;
+  return $c__8515__auto__$jscomp$3$$;
 }
 ;$cljs$core$apply$cljs$0core$0IFn$0_invoke$0arity$02$$(function() {
-  var $c__10686__auto__$jscomp$13$$ = $cljs$core$async$chan$cljs$0core$0IFn$0_invoke$0arity$03$$(1);
+  var $c__8515__auto__$jscomp$8$$ = $cljs$core$async$chan$cljs$0core$0IFn$0_invoke$0arity$03$$(1);
   $cljs$core$async$impl$dispatch$run$$(function() {
-    var $f__10687__auto__$jscomp$25$$ = function() {
-      function $switch__10523__auto__$jscomp$27$$($state_13313$$) {
-        var $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$ = $state_13313$$[1];
-        if (1 === $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$) {
-          return $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$ = $rsstonews$web$serve$$(), $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$ = $cljs$core$async$interop$p__GT_c$$($inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$), $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_13313$$, 2, $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$);
+    var $f__8516__auto__$jscomp$4$$ = function() {
+      function $switch__8492__auto__$jscomp$4$$($state_8794$$) {
+        var $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$ = $state_8794$$[1];
+        if (1 === $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$) {
+          return $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$ = $rsstonews$web$serve$$(), $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$ = $cljs$core$async$interop$p__GT_c$$($inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$), $cljs$core$async$impl$ioc_helpers$take_BANG_$$($state_8794$$, 2, $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$);
         }
-        if (2 === $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$) {
-          $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$ = $state_13313$$[2];
-          var $inst_13295_inst_13304_inst_13306$$ = $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$ instanceof $cljs$core$ExceptionInfo$$, $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$));
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$, $cljs$cst$keyword$promise_DASH_error$$);
-          $state_13313$$[7] = $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$;
-          $state_13313$$[1] = $cljs$core$truth_$$($inst_13295_inst_13304_inst_13306$$ && $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$) ? 3 : 4;
+        if (2 === $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$) {
+          $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$ = $state_8794$$[2];
+          var $inst_8779_inst_8788_inst_8790$$ = $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$ instanceof $cljs$core$ExceptionInfo$$, $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$ = $cljs$cst$keyword$error$$.$cljs$core$IFn$_invoke$arity$1$($cljs$core$ex_data$$($inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$));
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$ = $cljs$core$_EQ_$$.$cljs$core$IFn$_invoke$arity$2$($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$, $cljs$cst$keyword$promise_DASH_error$$);
+          $state_8794$$[7] = $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$;
+          $state_8794$$[1] = $cljs$core$truth_$$($inst_8779_inst_8788_inst_8790$$ && $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$) ? 3 : 4;
           return $cljs$cst$keyword$recur$$;
         }
-        if (3 === $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$) {
-          throw $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$ = $state_13313$$[7], $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$;
+        if (3 === $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$) {
+          throw $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$ = $state_8794$$[7], $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$;
         }
-        if (4 === $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$) {
-          return $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$ = $state_13313$$[7], $state_13313$$[2] = $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$, $state_13313$$[1] = 5, $cljs$cst$keyword$recur$$;
+        if (4 === $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$) {
+          return $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$ = $state_8794$$[7], $state_8794$$[2] = $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$, $state_8794$$[1] = 5, $cljs$cst$keyword$recur$$;
         }
-        if (5 === $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$) {
-          $inst_13295_inst_13304_inst_13306$$ = $state_13313$$[2];
-          $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$ = $cljs$core$nth$cljs$0core$0IFn$0_invoke$0arity$03$$($inst_13295_inst_13304_inst_13306$$, 0, null);
-          $inst_13295_inst_13304_inst_13306$$ = $cljs$core$nth$cljs$0core$0IFn$0_invoke$0arity$03$$($inst_13295_inst_13304_inst_13306$$, 1, null);
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$ = $rsstonews$server$app$$;
-          $cljs$core$truth_$$($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$.$_router$) && ($cljs$core$print$$.$cljs$core$IFn$_invoke$arity$variadic$($cljs$core$prim_seq$cljs$0core$0IFn$0_invoke$0arity$02$$([["Deleting ", $cljs$core$str$$.$cljs$core$IFn$_invoke$arity$1$($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$._router.stack.length), " routes"].join("")])), $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$.$_router$ = 
+        if (5 === $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$) {
+          $inst_8779_inst_8788_inst_8790$$ = $state_8794$$[2];
+          $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$ = $cljs$core$nth$cljs$0core$0IFn$0_invoke$0arity$03$$($inst_8779_inst_8788_inst_8790$$, 0, null);
+          $inst_8779_inst_8788_inst_8790$$ = $cljs$core$nth$cljs$0core$0IFn$0_invoke$0arity$03$$($inst_8779_inst_8788_inst_8790$$, 1, null);
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$ = $rsstonews$server$app$$;
+          $cljs$core$truth_$$($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$.$_router$) && ($cljs$core$print$$.$cljs$core$IFn$_invoke$arity$variadic$($cljs$core$prim_seq$cljs$0core$0IFn$0_invoke$0arity$02$$([["Deleting ", $cljs$core$str$$.$cljs$core$IFn$_invoke$arity$1$($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$._router.stack.length), " routes"].join("")])), $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$.$_router$ = 
           null);
-          $rsstonews$web$add_default_routes$$($rsstonews$web$add_default_middleware$$($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$));
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$ = $rsstonews$server$app$$;
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$.$post$("/login", $rsstonews$server$login$$);
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$.get("/logout", $rsstonews$server$logout$$);
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$.$post$("/set-password", $rsstonews$server$set_password$$);
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$.use($rsstonews$server$authenticate$$);
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$.get("/proxy", $rsstonews$server$cors_proxy$$);
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$.get("/data", $rsstonews$server$get_data$$);
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$.$post$("/save", $rsstonews$server$set_data$$);
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$.$post$("/send-emails", $rsstonews$server$send_emails$$);
-          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$ = $cljs$core$println$cljs$0core$0IFn$0_invoke$0arity$0variadic$$($cljs$core$prim_seq$cljs$0core$0IFn$0_invoke$0arity$02$$(["Fresh routes loaded: ", $rsstonews$server$app$$._router.stack.length]));
-          var $inst_13308$$ = $cljs$core$println$cljs$0core$0IFn$0_invoke$0arity$0variadic$$($cljs$core$prim_seq$cljs$0core$0IFn$0_invoke$0arity$02$$(["Servers started."]));
-          $state_13313$$[8] = $inst_13283_inst_13284_inst_13286_inst_13286__$1_inst_13305_state_val_13314$$;
-          $state_13313$$[9] = $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_13297_inst_13298_inst_13307$$;
-          $state_13313$$[10] = $inst_13295_inst_13304_inst_13306$$;
-          return $cljs$core$async$impl$ioc_helpers$return_chan$$($state_13313$$, $inst_13308$$);
+          $rsstonews$web$add_default_routes$$($rsstonews$web$add_default_middleware$$($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$));
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$ = $rsstonews$server$app$$;
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$.post.call($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$, "/login", $rsstonews$server$login$$);
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$.get("/logout", $rsstonews$server$logout$$);
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$.post.call($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$, "/set-password", $rsstonews$server$set_password$$);
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$.use($rsstonews$server$authenticate$$);
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$.get("/proxy", $rsstonews$server$cors_proxy$$);
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$.get("/data", $rsstonews$server$get_data$$);
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$.post.call($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$, "/save", $rsstonews$server$set_data$$);
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$.post.call($app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$, "/send-emails", $rsstonews$server$send_emails$$);
+          $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$ = $cljs$core$println$cljs$0core$0IFn$0_invoke$0arity$0variadic$$($cljs$core$prim_seq$cljs$0core$0IFn$0_invoke$0arity$02$$(["Fresh routes loaded: ", $rsstonews$server$app$$._router.stack.length]));
+          var $inst_8792$$ = $cljs$core$println$cljs$0core$0IFn$0_invoke$0arity$0variadic$$($cljs$core$prim_seq$cljs$0core$0IFn$0_invoke$0arity$02$$(["Servers started."]));
+          $state_8794$$[8] = $inst_8779_inst_8788_inst_8790$$;
+          $state_8794$$[9] = $app$jscomp$inline_1000_app$jscomp$inline_1002_inst_8781_inst_8782_inst_8791$$;
+          $state_8794$$[10] = $inst_8775_inst_8776_inst_8778_inst_8778__$1_inst_8789_state_val_8795$$;
+          return $cljs$core$async$impl$ioc_helpers$return_chan$$($state_8794$$, $inst_8792$$);
         }
         return null;
       }
       return function() {
-        function $rsstonews$server$main_BANG__$_state_machine__10524__auto____1$$($state_13313$jscomp$1$$) {
+        function $rsstonews$server$main_BANG__$_state_machine__8493__auto____1$$($state_8794$jscomp$1$$) {
           for (;;) {
             a: {
               try {
                 for (;;) {
-                  var $result__10526__auto__$jscomp$inline_813$$ = $switch__10523__auto__$jscomp$27$$($state_13313$jscomp$1$$);
-                  if (!$cljs$core$keyword_identical_QMARK_$$($result__10526__auto__$jscomp$inline_813$$, $cljs$cst$keyword$recur$$)) {
-                    var $ex__10527__auto__$jscomp$inline_814_ret_value__10525__auto__$jscomp$25$$ = $result__10526__auto__$jscomp$inline_813$$;
+                  var $result__8495__auto__$jscomp$inline_813$$ = $switch__8492__auto__$jscomp$4$$($state_8794$jscomp$1$$);
+                  if (!$cljs$core$keyword_identical_QMARK_$$($result__8495__auto__$jscomp$inline_813$$, $cljs$cst$keyword$recur$$)) {
+                    var $ex__8496__auto__$jscomp$inline_814_ret_value__8494__auto__$jscomp$4$$ = $result__8495__auto__$jscomp$inline_813$$;
                     break a;
                   }
                 }
-              } catch ($e13344$jscomp$inline_815$$) {
-                $ex__10527__auto__$jscomp$inline_814_ret_value__10525__auto__$jscomp$25$$ = $e13344$jscomp$inline_815$$;
-                $state_13313$jscomp$1$$[2] = $ex__10527__auto__$jscomp$inline_814_ret_value__10525__auto__$jscomp$25$$;
-                if ($cljs$core$seq$$($state_13313$jscomp$1$$[4])) {
-                  $state_13313$jscomp$1$$[1] = $cljs$core$first$$($state_13313$jscomp$1$$[4]);
+              } catch ($e8803$jscomp$inline_815$$) {
+                $ex__8496__auto__$jscomp$inline_814_ret_value__8494__auto__$jscomp$4$$ = $e8803$jscomp$inline_815$$;
+                $state_8794$jscomp$1$$[2] = $ex__8496__auto__$jscomp$inline_814_ret_value__8494__auto__$jscomp$4$$;
+                if ($cljs$core$seq$$($state_8794$jscomp$1$$[4])) {
+                  $state_8794$jscomp$1$$[1] = $cljs$core$first$$($state_8794$jscomp$1$$[4]);
                 } else {
-                  throw $ex__10527__auto__$jscomp$inline_814_ret_value__10525__auto__$jscomp$25$$;
+                  throw $ex__8496__auto__$jscomp$inline_814_ret_value__8494__auto__$jscomp$4$$;
                 }
-                $ex__10527__auto__$jscomp$inline_814_ret_value__10525__auto__$jscomp$25$$ = $cljs$cst$keyword$recur$$;
+                $ex__8496__auto__$jscomp$inline_814_ret_value__8494__auto__$jscomp$4$$ = $cljs$cst$keyword$recur$$;
               }
             }
-            if (!$cljs$core$keyword_identical_QMARK_$$($ex__10527__auto__$jscomp$inline_814_ret_value__10525__auto__$jscomp$25$$, $cljs$cst$keyword$recur$$)) {
-              return $ex__10527__auto__$jscomp$inline_814_ret_value__10525__auto__$jscomp$25$$;
+            if (!$cljs$core$keyword_identical_QMARK_$$($ex__8496__auto__$jscomp$inline_814_ret_value__8494__auto__$jscomp$4$$, $cljs$cst$keyword$recur$$)) {
+              return $ex__8496__auto__$jscomp$inline_814_ret_value__8494__auto__$jscomp$4$$;
             }
           }
         }
-        function $rsstonews$server$main_BANG__$_state_machine__10524__auto____0$$() {
-          var $statearr_13342$$ = [null, null, null, null, null, null, null, null, null, null, null];
-          $statearr_13342$$[0] = $rsstonews$server$main_BANG__$_state_machine__10524__auto__$$;
-          $statearr_13342$$[1] = 1;
-          return $statearr_13342$$;
+        function $rsstonews$server$main_BANG__$_state_machine__8493__auto____0$$() {
+          var $statearr_8802$$ = [null, null, null, null, null, null, null, null, null, null, null];
+          $statearr_8802$$[0] = $rsstonews$server$main_BANG__$_state_machine__8493__auto__$$;
+          $statearr_8802$$[1] = 1;
+          return $statearr_8802$$;
         }
-        var $rsstonews$server$main_BANG__$_state_machine__10524__auto__$$ = null;
-        $rsstonews$server$main_BANG__$_state_machine__10524__auto__$$ = function($state_13313$jscomp$2$$) {
+        var $rsstonews$server$main_BANG__$_state_machine__8493__auto__$$ = null;
+        $rsstonews$server$main_BANG__$_state_machine__8493__auto__$$ = function($state_8794$jscomp$2$$) {
           switch(arguments.length) {
             case 0:
-              return $rsstonews$server$main_BANG__$_state_machine__10524__auto____0$$.call(this);
+              return $rsstonews$server$main_BANG__$_state_machine__8493__auto____0$$.call(this);
             case 1:
-              return $rsstonews$server$main_BANG__$_state_machine__10524__auto____1$$.call(this, $state_13313$jscomp$2$$);
+              return $rsstonews$server$main_BANG__$_state_machine__8493__auto____1$$.call(this, $state_8794$jscomp$2$$);
           }
           throw Error("Invalid arity: " + arguments.length);
         };
-        $rsstonews$server$main_BANG__$_state_machine__10524__auto__$$.$cljs$core$IFn$_invoke$arity$0$ = $rsstonews$server$main_BANG__$_state_machine__10524__auto____0$$;
-        $rsstonews$server$main_BANG__$_state_machine__10524__auto__$$.$cljs$core$IFn$_invoke$arity$1$ = $rsstonews$server$main_BANG__$_state_machine__10524__auto____1$$;
-        return $rsstonews$server$main_BANG__$_state_machine__10524__auto__$$;
+        $rsstonews$server$main_BANG__$_state_machine__8493__auto__$$.$cljs$core$IFn$_invoke$arity$0$ = $rsstonews$server$main_BANG__$_state_machine__8493__auto____0$$;
+        $rsstonews$server$main_BANG__$_state_machine__8493__auto__$$.$cljs$core$IFn$_invoke$arity$1$ = $rsstonews$server$main_BANG__$_state_machine__8493__auto____1$$;
+        return $rsstonews$server$main_BANG__$_state_machine__8493__auto__$$;
       }();
-    }(), $state__10688__auto__$jscomp$25$$ = function() {
-      var $statearr_13349$$ = $f__10687__auto__$jscomp$25$$();
-      $statearr_13349$$[6] = $c__10686__auto__$jscomp$13$$;
-      return $statearr_13349$$;
+    }(), $state__8517__auto__$jscomp$4$$ = function() {
+      var $statearr_8806$$ = $f__8516__auto__$jscomp$4$$();
+      $statearr_8806$$[6] = $c__8515__auto__$jscomp$8$$;
+      return $statearr_8806$$;
     }();
-    return $cljs$core$async$impl$ioc_helpers$run_state_machine_wrapped$$($state__10688__auto__$jscomp$25$$);
+    return $cljs$core$async$impl$ioc_helpers$run_state_machine_wrapped$$($state__8517__auto__$jscomp$4$$);
   });
-  return $c__10686__auto__$jscomp$13$$;
+  return $c__8515__auto__$jscomp$8$$;
 }, process.argv.slice(2));
 
 })();
