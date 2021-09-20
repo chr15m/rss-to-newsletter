@@ -1,4 +1,4 @@
-build: src/**/*.cljs shadow-cljs.edn package.json public/**/**
+build: src/**/*.cljs shadow-cljs.edn package.json public/**/** server.js
 	rm -rf build
 	rsync -aLz --exclude js public/ build
 	npx shadow-cljs release app --debug
