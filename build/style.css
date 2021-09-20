@@ -1,0 +1,138 @@
+/* site specific styles go here */
+
+body, html, #app, #loading {
+  width: 100%;
+  height: 100%;
+}
+
+#loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+nav ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+nav ul li {
+  cursor: pointer;
+  list-style-type: none;
+  margin: 0px 0.25em;
+  display: inline-block;
+}
+
+nav ul li.selected {
+  color: red;
+}
+
+.last {
+  margin-left: 1em;
+}
+
+#posts .post {
+  margin-bottom: 2em;
+}
+
+#posts .title {
+  display: block;
+  margin-bottom: 0px;
+}
+
+#posts .date {
+  color: #999;
+}
+
+#posts .source {
+  display: block;
+  color: #999;
+}
+
+#config li {
+  display: flex;
+}
+
+#config li .list-name {
+  width: 12ch;
+}
+
+#config li .email-field {
+  width: 12ch;
+}
+
+#messages {
+  position: fixed;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 50em;
+  max-width: 100%;
+  background-color: white;
+}
+
+#messages .message {
+  border: 2px solid pink;
+  background-color: #F6E3E6;
+  padding: 0.25em 0.5em;
+  border-radius: 3px;
+  width: inherit;
+  margin: 0.25em 0px;
+  cursor: pointer;
+}
+
+/*** prosemirror editor styling ***/
+
+#editor {
+  margin-top: 2em;
+}
+
+#editor > * {
+  margin: 1em 0px;
+}
+
+#editor .ProseMirror {
+  padding: 0.125em 0.75em;
+  background-color: #eeeeee;
+  border-radius: 0.375em;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  min-height: 10em;
+  outline: 0;
+  border: 2px solid transparent;
+}
+
+#editor .ProseMirror:active, .ProseMirror:focus {
+  border: 2px solid silver;
+}
+
+#editor .ProseMirror-menubar {
+}
+
+.ProseMirror .placeholder::before {
+  position: absolute;
+  color: #bbb;
+  cursor: text;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.ProseMirror .placeholder::before {
+  content: "Your newsletter text...";
+}
+
+.ProseMirror-focused .placeholder::before {
+}
+
+#plaintext pre {
+  white-space: pre-wrap;
+}
+
+#editor .sent-count {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+#editor .ProseMirror img {
+  max-width: 100%;
+}
