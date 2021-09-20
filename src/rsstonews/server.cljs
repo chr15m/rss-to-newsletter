@@ -6,7 +6,8 @@
     ["path" :as path]
     ["node-fetch" :as fetch]
     [cljs.core.async :refer (go <!) :as async]
-    [cljs.core.async.interop :refer-macros [<p!]]))
+    [cljs.core.async.interop :refer-macros [<p!]]
+    [applied-science.js-interop :as j]))
 
 (set! *warn-on-infer* false)
 
@@ -128,14 +129,14 @@
         (.json res send-results)))))
 
 (defn setup-routes [app]
-  (.post app "/login" login)
+  (j/call app :post "/login" login)
   (.get app "/logout" logout)
-  (.post app "/set-password" set-password)
+  (j/call app :post "/set-password" set-password)
   (.use app authenticate)
   (.get app "/proxy" cors-proxy)
   (.get app "/data" get-data)
-  (.post app "/save" set-data)
-  (.post app "/send-emails" send-emails))
+  (j/call app :post "/save" set-data)
+  (j/call app :post "/send-emails" send-emails))
 
 (defn reload! []
   (web/reset-routes app)
